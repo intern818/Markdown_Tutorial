@@ -105,9 +105,9 @@ int main(){
 
 引用指令: `![图像描述](相对路径)`
 - 正常展示
-![lion](.\pic\R.jpg)
+![Sky](./pic/R.jpg)
 - 居中展示
-<img src="./pic/Lion.webp" alt="lion" style="display: block; margin: 0 auto; width: 200px;"/>
+<img src="./pic/lion.webp" alt="lion" style="display: block; margin: 0 auto; width: 200px;"/>
 
 - 如需指定图像大小，可利用该HTML格式指令设置图像宽度：`<img src="./relative/path/to/your/image.jpg" alt="sth" width="200"/>`
 
