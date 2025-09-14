@@ -1,15 +1,38 @@
 # <font face = "Times New Roman" font color = "red"> VS Code + Markdown + GitHub </font> <font face = "楷体" font color = "purple"> 个人知识库搭建教程 </font>
-## <center><font face ="Yu Gothic" font color = "green" size =3> Intern-8 </font> </center>
+## <center><font face ="Yu Gothic" font color = "green" size =5> Intern-8 </font> </center>
+
+- [ VS Code + Markdown + GitHub   个人知识库搭建教程 ](#-vs-code--markdown--github---个人知识库搭建教程-)
+  - [ Intern-8  ](#-intern-8--)
+  - [一. 准备工作](#一-准备工作)
+  - [二. 基本语法](#二-基本语法)
+  - [三.图片](#三图片)
+  - [四.公式使用(参考Latex语法)](#四公式使用参考latex语法)
+  - [五. 目录](#五-目录)
+  - [六. 导出PDF](#六-导出pdf)
+  - [七.提交到Github](#七提交到github)
+
+
 ## 一. 准备工作
 
 1. **安装 VS Code**  
+
    [vscode 官网下载地址](https://code.visualstudio.com/)
 
 2. **下载必要的插件**
-   - Markdown All in One  
-   - Markdown Preview Enhanced  
-   - Markdown PDF（不推荐）  
-   - Paste Image  
+
+   > 1. **Markdown All in One**  
+   > * 快捷键：使用 `Ctrl+B` 加粗，`Ctrl+I` 斜体等
+   > * 智能列表：在列表项后按回车，会自动生成下一项的标记
+   > * 自动生成目录
+
+   >2. Markdown Preview Enhanced
+   >- 用于增强markdown编辑功能
+  
+   > 3. Markdown PDF（不推荐）
+   > - 用于导出PDF，详情请看[导出PDF](#六-导出pdf)
+
+   > 4. Paste Image
+   > - 用于自动插入图片  
 
 3. **创建 `.md` 文档，打开同步预览功能，开始编辑**
 
@@ -40,9 +63,10 @@
     | a | b | c |
 5. **段落**
    - 换行：两个以上空格后回车/空一行
-   - 分割线：3个***
+   - 分割线：*** 或者 ---
+    ---
     ***
-   - 字体
+- 字体
 | 字体 | 代码 |
 |:-:|:-:|
 | 斜体 | *斜体* |
@@ -63,10 +87,10 @@ int main(){
 `print( "hello wor1d);`
 
 7. **超链接**
-- 1[更多使用教程可以参考网站]:https://www.runoob.com/markdown/md-link.html
+- 查找更多使用教程可以[参考网站](https://www.runoob.com/markdown/md-link.html)
 - 查看更多使用功能请[点击链接][教程]
 
-## 3.图片
+## 三.图片
 > * 直接将图像存到项目中，比折腾图床更简单、安全和稳定
 > * 为了整洁，建议将图像存入固定文件夹，而非与markdown文件并列同级目录
 > * 所以虽然`Ctrl+V`就可以直接粘贴图片到同级目录下一起上传，但不推荐
@@ -81,9 +105,9 @@ int main(){
 
 引用指令: `![图像描述](相对路径)`
 - 正常展示
-![lion](.\pic\lion.webp)
+![lion](.\pic\R.jpg)
 - 居中展示
-<img src="./pic/lion.webp" alt="lion" style="display: block; margin: 0 auto; width: 200px;"/>
+<img src="./pic/Lion.webp" alt="lion" style="display: block; margin: 0 auto; width: 200px;"/>
 
 - 如需指定图像大小，可利用该HTML格式指令设置图像宽度：`<img src="./relative/path/to/your/image.jpg" alt="sth" width="200"/>`
 
@@ -102,14 +126,14 @@ int main(){
 3. 详细事项：
 
 1. 按快捷键后该插件会自动在项目根目录下新建一个`images`文件夹（如不存在），然后会把剪切板中的图像粘贴到该文件夹（参见下图），同时自动在markdown中创建图像代码。（**即手动方法的步骤1-3**）
-   1. ![picture 1](images/c9917eebbcb574b6e08000ca4b7cf4d01d41e7548daca4ee5bf97d8226302606.png)  
+   1. ![picture 1](./pic/A.png)  
 2. 不论你在项目的哪一层级目录的markdown文件中，该插件都只会默认将图像保存到根目录下
 3. 首次插入图像可能较慢
 4. > 快捷键同样绕手，可以考虑修改为`Ctrl+Shift+I`
 5. 如果需要频繁修改图像尺寸，推荐将`markdown-image.base.codeType`从`Markdown`设置为`HTML`格式
 6. 更多设置参考官方教程：[link](https://github.com/imlinhanchao/vsc-markdown-image/blob/HEAD/README.zh-cn.md)
 
-## 4.公式使用(参考Latex语法)
+## 四.公式使用(参考Latex语法)
 1. **行内公式**
 - $f(x) = Ax +b $
 - $f(x) \sim \mathcal{GP}(m(x), k(x,x'))$
@@ -121,10 +145,10 @@ A =
     a_{21} & a_{22}
 \end{vmatrix}
 $$
-- Latex符号请参考[link]:(https://blog.csdn.net/Yushan_Ji/article/details/134322574)
-- Latex教程请参考[link]:https://www.runoob.com/latex/latex-tutorial.html
+- Latex符号请参考[link](https://github.com/LinXueyuanStdio/LaTeX_OCR_PRO)
+- Latex教程请参考[link](https://www.runoob.com/latex/latex-tutorial.html)
 - 复杂公式可借助大模型进行辅助编写
-## 5. 目录
+## 五. 目录
 
 1. 下载插件`Markdown All in One`
 2. `Ctrl+Shift+P` -> 输入`toc` -> 选择`Create Table of Contents`即可在相应位置创建
@@ -136,20 +160,16 @@ $$
 
 上述针对文件内目录自动生成，对于多文件的目录，如：你想在`README.md`中列出所有文件的目录，可以自行构造，示例如下：
 
-* [Operating System](https://github.com/haooxia/CSJourney/blob/main/os/os_essence.md)
+- [Operating System](https://github.com/haooxia/CSJourney/blob/main/os/os_essence.md)
 * [Computer Networks](https://github.com/haooxia/CSJourney/blob/main/network/network_essence.md)
 
 
-## 6. 导出PDF
+## 六. 导出PDF
 
 * 基于插件`Markdown Preview Enhanced`打开预览窗口
 * 在pdf上右击鼠标 -> 点击Export -> Chrome(Puppetter) -> PDF
 * 打印的pdf会存在当前目录
-## 7.提交到Github
-
-- 直接使用vscode可视化工具`commit & push`即可
-
-- 者命令行:
+## 七.提交到Github
 
 ```shell
 git add .
